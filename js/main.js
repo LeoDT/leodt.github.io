@@ -6,6 +6,10 @@
         tabs = $('.tab'),
         change_tab = function(){
             var hash = location.hash;
+            if(!hash){
+                hash = '#home';
+            }
+
             panes.removeClass('show');
             panes.filter(hash).addClass('show');
             tabs.removeClass('active');
