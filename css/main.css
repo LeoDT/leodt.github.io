@@ -1,3 +1,93 @@
+html{
+    height: 100%;
+}
 body{
     background-color: #F0F0F0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: .2s;
+}
+.wrapper{
+    width: 640px;
+    margin: 0 auto;
+    position: relative;
+    height: 80%;
+}
+header{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 41px;
+    border-top: 6px solid #B3B3B3;
+    width: 100%;
+}
+.logo{
+    background-color: #B50000;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+.logo:before{
+    background-color: #F0F0F0;
+    content: " ";
+    margin: 0 0 0 9px;
+    width: 3px;
+    height: 23px;
+    display: block;
+}
+.logo:after{
+    background-color: #F0F0F0;
+    content: " ";
+    margin: 0 0 0 9px;
+    width: 14px;
+    height: 3px;
+    display: block;
+}
+nav ul{
+    padding: 0;
+}
+nav li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 25px 0 0;
+}
+nav a{
+    color: #666;
+    font-size: 14px;
+}
+nav a:hover{
+    color: #000;
+}
+nav .active{
+    color: #B50000;
+}
+.pane{
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+}
+#home{
+    text-align: right;
+}
+#about{
+    padding: 0 0 0 120px;
+}
+#about .about-content a{
+    color: #149A9A;
+}
+#about .avatar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.show{
+    display: block;
 }
