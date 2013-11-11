@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>LeoDT - Web developer</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+<div class="wrapper">
+    <header>
+        <div class="logo"></div>
+        <nav class="tabs">
+            <a class="tab logo" href="#home"></a>
+            <ul>
+                <li><a class="tab" href="#about">About</a></li>
+                <li><a class="tab" href="#skills">Skills</a></li>
+                <li><a class="tab" href="#links">Links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tab-panes">
+        <div class="pane" id="home">
+            I'm LeoDT <br> I create website
+        </div>
+        <div class="pane" id="about">
+            <div class="about-content">
+                <p>Hello, my name is Liu Cheng. I’m a web developer and living in Shanghai.</p>
+                <p>After manage several bbs sites in my highschool, I start build website myself in the college, Huazhong University of Science and Technology.</p>
+                <p>I joined the Bingyan, a great college web team, as a front-end developer, then I became the team manager until my graduate. Bingyan gave me knowledge and opportunity.</p>
+                <p>Worked in Tencent, mknote in Shanda Innovation, and Nexjoy for these years.</p>
+                <p>I’m a javascripter and pythoner, I discover and learn new things.</p>
+            </div>
+            <img src="img/avatar.png" alt="LeoDT's Avatar">
+        </div>
+        <div class="pane" id="skills"></div>
+        <div class="pane" id="links"></div>
+    </div>
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
