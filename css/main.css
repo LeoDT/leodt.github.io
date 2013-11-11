@@ -3,6 +3,7 @@ html{
 }
 body{
     background-color: #F0F0F0;
+    color: #666;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 12px;
     height: 100%;
@@ -13,7 +14,7 @@ a{
     transition-duration: .2s;
 }
 .wrapper{
-    width: 640px;
+    width: 630px;
     margin: 0 auto;
     position: relative;
     height: 80%;
@@ -87,6 +88,72 @@ nav .active{
     position: absolute;
     left: 0;
     bottom: 0;
+}
+#skills{
+    margin: 0 0 10px;
+}
+.skill{
+    float: left;
+    margin: 0 50px 0 0;
+    position: relative;
+}
+.last{
+    margin-right: 0;
+}
+.skill .bar{
+    background-color: #B3B3B3;
+    width: 120px;
+    position: relative;
+    height: 20px;
+    text-align: center;
+}
+.skill .name{
+    color: #FFF;
+    line-height: 20px;
+    position: relative;
+    z-index: 2;
+}
+.skill .percent{
+    display: none;
+}
+.bar .bar-inner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    z-index: 1;
+    width: 0;
+    transition-property: width;
+    transition-duration: .2s;
+}
+.bar .blue{
+    background-color: #3495D9;
+}
+.bar .green{
+    background-color: #83AD3D;
+}
+.bar .purple{
+    background-color: #5C74D8;
+}
+.bar .pink{
+    background-color: #FF046E;
+}
+.skill .extra{
+    position: absolute;
+    text-align: center;
+    top: -36px;
+    left: 50%;
+    white-space: nowrap;
+    display: none;
+}
+.skill .arrow{
+    position: absolute;
+    border: 6px solid #F0F0F0;
+    border-bottom-color: #B3B3B3;
+    left: 50%;
+    top: -18px;
+    margin-left: -6px;
+    display: none;
 }
 .show{
     display: block;
