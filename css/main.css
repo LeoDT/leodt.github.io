@@ -148,7 +148,8 @@ nav .active:hover{
     z-index: 1;
     width: 0;
     transition-property: width;
-    transition-duration: .2s;
+    transition-duration: .6s;
+    transition-timing-function: ease;
 }
 .bar .blue{
     background-color: #3495D9;

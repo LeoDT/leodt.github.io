@@ -35,6 +35,7 @@
                         el.removeClass('in');
 
                         if(i + 1 == skills.length){
+                            skills.find('.bar-inner').attr('style', '');
                             next(hash);
                         }
                     }, i*120);
@@ -63,6 +64,9 @@
                     el = $(el);
                     setTimeout(function(){
                         el.addClass('in');
+                        setTimeout(function(){
+                            el.find('.bar-inner').attr('style', el.find('.bar-inner').data('transition'));
+                        }, i*50 + 20);
                     }, i*120);
                 });
             },
