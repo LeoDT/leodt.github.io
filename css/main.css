@@ -20,12 +20,14 @@ a{
     height: 80%;
 }
 header{
+    background-color: #F0F0F0;
     position: absolute;
     bottom: 0;
     left: 0;
     height: 41px;
     border-top: 6px solid #B3B3B3;
     width: 100%;
+    z-index: 5;
 }
 .logo{
     background-color: #B50000;
@@ -75,6 +77,13 @@ nav .active:hover{
     position: absolute;
     right: 0;
     bottom: 50px;
+
+    opacity: 0;
+    -webkit-transform: translate(0, 30px);
+    -moz-transform: translate(0, 30px);
+    -ms-transform: translate(0, 30px);
+    -o-transform: translate(0, 30px);
+    transform: translate(0, 30px);
 }
 #home{
     text-align: right;
@@ -92,11 +101,25 @@ nav .active:hover{
 }
 #skills{
     margin: 0 0 10px;
+
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
 }
 .skill{
     float: left;
     margin: 0 50px 0 0;
     position: relative;
+
+    -webkit-transform: translate(0, 30px);
+    -moz-transform: translate(0, 30px);
+    -ms-transform: translate(0, 30px);
+    -o-transform: translate(0, 30px);
+    transform: translate(0, 30px);
+    opacity: 0;
 }
 .last{
     margin-right: 0;
@@ -156,23 +179,58 @@ nav .active:hover{
     margin-left: -6px;
     display: none;
 }
+#links{
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+}
 .link{
-    color: #F0F0F0;
     display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 3px;
+
+    -webkit-transform: translate(0, 30px);
+    -moz-transform: translate(0, 30px);
+    -ms-transform: translate(0, 30px);
+    -o-transform: translate(0, 30px);
+    transform: translate(0, 30px);
+    opacity: 0;
+}
+.link a{
+    display: block;
+    color: #F0F0F0;
     font-size: 28px;
     line-height: 40px;
     background-color: #B3B3B3;
-    width: 40px;
-    height: 40px;
     border-radius: 20px;
     text-align: center;
-    margin: 0 0 0 3px;
     transition-property: background-color;
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
-.link:hover{
+.link a:hover{
     background-color: #666;
 }
 .show{
     display: block;
+}
+.in{
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.fade{
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease;
 }
