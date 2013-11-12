@@ -114,6 +114,24 @@
             last_hash = hash;
         };
 
+    skills.on('mouseenter', function(e){
+        var target = $(e.currentTarget).find('.extra, .arrow'),
+            extra = target.filter('.extra');
+
+        target.show();
+        extra.css('margin-left', -extra.width() / 2);
+        setTimeout(function(){
+            target.addClass('in');
+        }, 0);
+    }).on('mouseleave', function(e){
+        var target = $(e.currentTarget).find('.extra, .arrow');
+
+        target.removeClass('in');
+        setTimeout(function(){
+            target.hide();
+        }, 300);
+    });
+
     $(window).on('hashchange', function(e){
         change_tab();
     });

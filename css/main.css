@@ -100,8 +100,6 @@ nav .active:hover{
     bottom: 0;
 }
 #skills{
-    margin: 0 0 10px;
-
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
@@ -110,9 +108,11 @@ nav .active:hover{
     opacity: 1;
 }
 .skill{
+    cursor: pointer;
     float: left;
     margin: 0 50px 0 0;
     position: relative;
+    padding: 10px 0;
 
     -webkit-transform: translate(0, 30px);
     -moz-transform: translate(0, 30px);
@@ -130,6 +130,7 @@ nav .active:hover{
     position: relative;
     height: 20px;
     text-align: center;
+    z-index: 3;
 }
 .skill .name{
     color: #FFF;
@@ -166,19 +167,37 @@ nav .active:hover{
 .skill .extra{
     position: absolute;
     text-align: center;
-    top: -36px;
+    top: -22px;
     left: 50%;
     white-space: nowrap;
+    z-index: 2;
     display: none;
+    pointer-events: none;
+
+    -webkit-transform: translate(0, 30px);
+    -moz-transform: translate(0, 30px);
+    -ms-transform: translate(0, 30px);
+    -o-transform: translate(0, 30px);
+    transform: translate(0, 30px);
+    opacity: 0;
 }
 .skill .arrow{
     position: absolute;
     border: 6px solid #F0F0F0;
     border-bottom-color: #B3B3B3;
     left: 50%;
-    top: -18px;
+    top: -8px;
     margin-left: -6px;
+    z-index: 2;
     display: none;
+    pointer-events: none;
+
+    -webkit-transform: translate(0, 30px);
+    -moz-transform: translate(0, 30px);
+    -ms-transform: translate(0, 30px);
+    -o-transform: translate(0, 30px);
+    transform: translate(0, 30px);
+    opacity: 0;
 }
 #links{
     -webkit-transform: translate(0, 0);
@@ -218,6 +237,7 @@ nav .active:hover{
 .show{
     display: block;
 }
+.skill .in,
 .in{
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
