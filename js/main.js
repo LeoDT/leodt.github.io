@@ -35,8 +35,11 @@
                         el.removeClass('in');
 
                         if(i + 1 == skills.length){
-                            skills.find('.bar-inner').attr('style', '');
-                            next(hash);
+                            setTimeout(function(){
+                                panes.removeClass('show');
+                                skills.find('.bar-inner').attr('style', '');
+                                next(hash);
+                            }, 120);
                         }
                     }, i*120);
                 });
@@ -48,7 +51,10 @@
                         el.removeClass('in');
 
                         if(i + 1 == links.length){
-                            next(hash);
+                            setTimeout(function(){
+                                panes.removeClass('show');
+                                next(hash);
+                            }, 120);
                         }
                     }, i*120);
                 });
@@ -57,7 +63,11 @@
         trans_in = {
             'home': slide_in,
             'about': slide_in,
-            'skills': function(hash){
+            'skills': function(hash, first){
+                if(first){
+                    first();
+                }
+
                 panes.filter(hash).addClass('show');
 
                 skills.each(function(i, el){
@@ -66,11 +76,15 @@
                         el.addClass('in');
                         setTimeout(function(){
                             el.find('.bar-inner').attr('style', el.find('.bar-inner').data('transition'));
-                        }, i*50 + 20);
+                        }, i*50);
                     }, i*120);
                 });
             },
-            'links': function(hash){
+            'links': function(hash, first){
+                if(first){
+                    first();
+                }
+
                 panes.filter(hash).addClass('show');
 
                 links.each(function(i, el){
