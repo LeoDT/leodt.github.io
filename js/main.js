@@ -11,7 +11,7 @@
             panes.filter(hash).addClass('show');
             setTimeout(function(){
                 panes.filter(hash).addClass('in');
-            }, 0);
+            }, 10); // 10 ms for firefox
         },
         trans_out = {
             'home': function(next, hash){
@@ -41,7 +41,7 @@
                                 next(hash);
                             }, 120);
                         }
-                    }, i*120);
+                    }, i*120 + 10);
                 });
             },
             'links': function(next, hash){
@@ -56,7 +56,7 @@
                                 next(hash);
                             }, 120);
                         }
-                    }, i*120);
+                    }, i*120 + 10);
                 });
             }
         },
@@ -77,7 +77,7 @@
                         setTimeout(function(){
                             el.find('.bar-inner').attr('style', el.find('.bar-inner').data('transition'));
                         }, i*50);
-                    }, i*120);
+                    }, i*120 + 10);
                 });
             },
             'links': function(hash, first){
@@ -91,7 +91,7 @@
                     el = $(el);
                     setTimeout(function(){
                         el.addClass('in');
-                    }, i*120);
+                    }, i*120 + 10);
                 });
             }
         },
